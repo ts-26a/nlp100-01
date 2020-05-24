@@ -55,7 +55,7 @@ class Nlp100_01:
         Y = set(self.q06_letter_bi_gram(s2, 2))
         print(f"{X = }")
         print(f"{Y = }")
-        print(f"{X & Y = }")
+        print(f"{X + Y = }")
         print(f"{X & Y = }")
         print(f"{X - Y = }")
         print(f"{'se' in X = }")
