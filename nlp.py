@@ -35,10 +35,10 @@ class Nlp100_01:
 
     def q05_word_bi_gram(self, s, n):
         s = s.split()
-        return [s[x:x + 2] for x in range(len(s) - 1)]
+        return [s[x:x + n] for x in range(len(s) - (n - 1))]
 
     def q05_letter_bi_gram(self, s, n):
-        return [s[x:x + 2] for x in range(len(s) - 1)]
+        return [s[x:x + n] for x in range(len(s) - (n - 1))]
 
     def q05(self):
         s = "I am an NLPer"
@@ -46,7 +46,7 @@ class Nlp100_01:
         print(self.q05_letter_bi_gram(s, 2))
 
     def q06_letter_bi_gram(self, s, n):
-        return [s[x:x + 2] for x in range(len(s) - 1)]
+        return [s[x:x + n] for x in range(len(s) - (n - 1))]
 
     def q06(self):
         s1 = "paraparaparadise"
@@ -55,7 +55,7 @@ class Nlp100_01:
         Y = set(self.q06_letter_bi_gram(s2, 2))
         print(f"{X = }")
         print(f"{Y = }")
-        print(f"{X + Y = }")
+        print(f"{X | Y = }")
         print(f"{X & Y = }")
         print(f"{X - Y = }")
         print(f"{'se' in X = }")
