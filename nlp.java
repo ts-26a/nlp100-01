@@ -89,7 +89,7 @@ class Nlp100 {
 
     private static String[] q05_letter_n_gram(String s, int n) {
         char ss[] = s.toCharArray();
-        String res[] = new String[s.length() - (n - 1)]; // "abcd" -> ["ab", "bc", "cd"]
+        String res[] = new String[s.length() - (n - 1)];
         String r = "";
         for (int i = 0; i < s.length() - (n - 1); i++) {
             r = "";

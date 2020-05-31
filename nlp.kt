@@ -45,48 +45,33 @@ class Nlp100() {
         println(ml)
     }
 
-    fun q05NGram(tg: List<Char>, n: Int): List<String> {
-        val res: MutableList<String> = mutableListOf()
-        for (i in 0..(tg.size - n)) {
-            res.add(tg.slice(i..(i + n - 1)).toString())
+    fun q05WordNGram(s: String, n: Int): List<String> {
+        val ss: String = s.toList().map() {String.valueOf(it)}
+        var res: List<String> = listOf()
+        var r: String = ""
+        for (i in (0..(s.length - (n - 2)))) {
+            r = ""
+            for (j in (0..(n - 1))) {
+                r += String.valueOf(ss[i + j])
+            }
+            res.add(r)
         }
-        return res.toList()
+        return res
     }
 
-    fun q05NGram_(tg: List<String>, n: Int): List<String> {
-        val res: MutableList<String> = mutableListOf()
-        for (i in 0..(tg.size - n)) {
-            res.add(tg.slice(i..(i + n - 1)).toString())
+    fun q05LetterNGram(s: String, n: Int): List<String> {
+        /*
+        String ss[] = s.split(" ", 0);
+        String res[][] = new String[ss.length - (n - 1)][n];
+        int c = 0;
+        for (int i = 0; i < ss.length - (n - 1); i++) {
+            for (int j = 0; j < n; j++) {
+                res[i][j] = ss[i + j];
+            }
         }
-    return res.toList()
-    }
-
-    fun q05() {
-        val s: String = "I am an NLPer"
-        println(q05NGram(s.toList(), 2))
-        println(q05NGram_(s.split(" "), 2))
-    }
-
-    fun q06NGram(tg: List<Char>, n: Int): List<String> {
-        val res:MutableList<String> = mutableListOf()
-        for (i in 0..(tg.size - n)) {
-            res.add(tg.slice(i..(i + n - 1)).toString())
-        }
-        return res.toList()
-    }
-    fun q06() {
-        val s1: String = "paraparaparadise"
-        val s2: String = "paragraph"
-        val X: Set<String> = q06NGram(s1.toList(), 2).toSet()
-        val Y: Set<String> = q06NGram(s2.toList(), 2).toSet()
-        val se: String = "[s, e]"
-        println("X = ${X}")
-        println("Y = ${Y}")
-        println("X + Y = ${X + Y}")
-        println("X - Y = ${X - Y}")
-        println("X * Y = ${X intersect Y}")
-        println("se in X = ${se in X}")
-        println("se in Y = ${se in Y}")
+        return res;
+        */
+        val 
     }
 
     fun q07TmpNewString(x: Int, y: String, z: Double) = "${x}時の${y}は${z}"
