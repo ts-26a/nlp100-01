@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-# from __future__ import unicode_literals
-
 # This is python2
 
 from random import sample
@@ -9,7 +7,6 @@ import sys
 import codecs
 
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout)
-# sys.stdin = codecs.getreader("utf-8")(sys.stdin)
 
 
 class Nlp100_01(object):
