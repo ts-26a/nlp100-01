@@ -58,7 +58,7 @@ class Nlp100() {
         for (i in 0..(tg.size - n)) {
             res.add(tg.slice(i..(i + n - 1)).toString())
         }
-    return res.toList()
+        return res.toList()
     }
 
     fun q05() {
