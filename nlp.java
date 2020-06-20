@@ -216,7 +216,7 @@ class Nlp100 {
     }
 
     private static String q09_random_string(String s) {
-        if (s.length() < 5) return s;
+        if (s.length() <= 4) return s;
         String ssf[] = q09_str_to_array(s);
         String ss[] = q09_str_to_array(s.substring(1, s.length() - 1));
         String res = String.valueOf(ssf[0]);
